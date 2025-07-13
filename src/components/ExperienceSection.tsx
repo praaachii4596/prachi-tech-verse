@@ -7,7 +7,7 @@ const experiences = [
     id: 1,
     title: 'Full Stack Web Development Intern',
     company: 'MangosOrange',
-    duration: 'July 2025 - Present',
+    duration: '2025',
     type: 'Internship',
     description: 'Working on modern web applications using React.js, Node.js, Express.js, and MongoDB.',
     technologies: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'JavaScript', 'Git'],

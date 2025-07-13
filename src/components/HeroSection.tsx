@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { ChevronDown, Download, ExternalLink } from 'lucide-react';
-import heroImage from '@/assets/magical-tech-bg.jpg';
+import heroImage from '@/assets/cs-tech-bg.jpg';
 
 const roles = [
   "Problem Solver",
@@ -115,7 +115,7 @@ export const HeroSection = () => {
         </div>
 
         {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 animate-bounce">
           <ChevronDown className="h-8 w-8 text-primary" />
         </div>
       </div>

@@ -16,14 +16,14 @@ export const MagicalCursor = () => {
   const createSparkle = (x: number, y: number) => {
     const newSparkle: Sparkle = {
       id: Date.now() + Math.random(),
-      x: x + (Math.random() - 0.5) * 20,
-      y: y + (Math.random() - 0.5) * 20,
-      size: Math.random() * 8 + 4,
-      life: 30,
-      maxLife: 30,
+      x: x + (Math.random() - 0.5) * 40, // Wider spread for stardust
+      y: y + (Math.random() - 0.5) * 40,
+      size: Math.random() * 6 + 2, // Smaller, more dust-like particles
+      life: 25,
+      maxLife: 25,
     };
     
-    setSparkles(prev => [...prev.slice(-15), newSparkle]);
+    setSparkles(prev => [...prev.slice(-25), newSparkle]); // Keep more particles for stardust effect
   };
 
   useEffect(() => {
@@ -32,8 +32,9 @@ export const MagicalCursor = () => {
     };
 
     const handleClick = (e: MouseEvent) => {
-      for (let i = 0; i < 8; i++) {
-        setTimeout(() => createSparkle(e.clientX, e.clientY), i * 50);
+      // Create stardust effect with more particles and different timing
+      for (let i = 0; i < 15; i++) {
+        setTimeout(() => createSparkle(e.clientX, e.clientY), i * 30);
       }
     };
 
@@ -73,15 +74,15 @@ export const MagicalCursor = () => {
       {sparkles.map(sparkle => (
         <div
           key={sparkle.id}
-          className="absolute bg-primary rounded-full animate-pulse"
+          className="absolute bg-gradient-to-br from-primary to-neon-cyan rounded-full"
           style={{
             left: sparkle.x,
             top: sparkle.y,
             width: sparkle.size,
             height: sparkle.size,
-            opacity: sparkle.life / sparkle.maxLife,
-            transform: `translate(-50%, -50%) scale(${sparkle.life / sparkle.maxLife})`,
-            boxShadow: `0 0 ${sparkle.size}px hsl(var(--primary))`,
+            opacity: sparkle.life / sparkle.maxLife * 0.8,
+            transform: `translate(-50%, -50%) scale(${sparkle.life / sparkle.maxLife}) rotate(${sparkle.life * 10}deg)`,
+            boxShadow: `0 0 ${sparkle.size * 2}px hsl(var(--primary)), 0 0 ${sparkle.size}px hsl(var(--neon-cyan))`,
           }}
         />
       ))}
