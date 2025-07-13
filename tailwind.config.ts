@@ -52,16 +52,27 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
-				}
+				// Custom cyberpunk colors
+				'neon-cyan': 'hsl(var(--neon-cyan))',
+				'neon-purple': 'hsl(var(--neon-purple))',
+				'neon-teal': 'hsl(var(--neon-teal))',
+				'cyber-dark': 'hsl(var(--cyber-dark))',
+				'cyber-card': 'hsl(var(--cyber-card))',
+				'cyber-border': 'hsl(var(--cyber-border))'
+			},
+			backgroundImage: {
+				'gradient-cyber': 'var(--gradient-cyber)',
+				'gradient-hero': 'var(--gradient-hero)',
+				'gradient-accent': 'var(--gradient-accent)'
+			},
+			boxShadow: {
+				'neon': 'var(--shadow-neon)',
+				'purple': 'var(--shadow-purple)',
+				'glow': 'var(--shadow-glow)'
+			},
+			fontFamily: {
+				'sans': ['Inter', 'system-ui', 'sans-serif'],
+				'mono': ['JetBrains Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'monospace']
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
