@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { ChevronDown, Download, ExternalLink } from 'lucide-react';
-import heroImage from '@/assets/hero-bg.jpg';
+import heroImage from '@/assets/magical-tech-bg.jpg';
 
 const roles = [
   "Problem Solver",

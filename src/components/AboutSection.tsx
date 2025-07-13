@@ -1,6 +1,7 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { GraduationCap, Code, Brain, Lightbulb } from 'lucide-react';
+import profilePhoto from '@/assets/profile-photo.jpg';
 
 const timelineData = [
   {
@@ -50,6 +51,18 @@ export const AboutSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Bio Section */}
           <div className="space-y-6">
+            {/* Profile Photo */}
+            <div className="flex justify-center lg:justify-start mb-8">
+              <div className="relative group">
+                <img
+                  src={profilePhoto}
+                  alt="Prachi Joshi"
+                  className="w-48 h-48 rounded-full object-cover shadow-2xl transition-all duration-500 group-hover:scale-105 group-hover:shadow-neon"
+                />
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/20 to-neon-cyan/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+            </div>
+            
             <Card className="card-glow card-hover">
               <CardContent className="p-8">
                 <h3 className="text-2xl font-semibold mb-4 text-primary">

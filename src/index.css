@@ -171,6 +171,20 @@
   .section-padding {
     @apply py-20 px-4 md:px-8 lg:px-16;
   }
+  
+  /* Enhanced hover effects */
+  .hover-glow:hover {
+    box-shadow: 0 0 30px hsl(var(--primary) / 0.5);
+  }
+  
+  /* Cursor styles */
+  * {
+    cursor: none;
+  }
+  
+  a, button, [role="button"], input, textarea, select {
+    cursor: pointer;
+  }
 }
 
 @layer base {

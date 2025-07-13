@@ -7,9 +7,9 @@ const experiences = [
     id: 1,
     title: 'Full Stack Web Development Intern',
     company: 'MangosOrange',
-    duration: '2023 - Present',
+    duration: 'July 2025 - Present',
     type: 'Internship',
-    description: 'Working with React.js, Node.js, Express.js, and MongoDB in an agile development environment under senior developer guidance.',
+    description: 'Working on modern web applications using React.js, Node.js, Express.js, and MongoDB.',
     technologies: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'JavaScript', 'Git'],
     achievements: [
       'Collaborated on multiple client projects using modern web technologies',
@@ -29,16 +29,28 @@ const achievements = [
     color: 'text-neon-purple'
   },
   {
+    title: '1st Runner Up - Internal Hackathon',
+    description: 'UI/UX Design Category - Recognized for innovative design solutions',
+    icon: Award,
+    color: 'text-neon-cyan'
+  },
+  {
+    title: '1st Runner Up - Internal Exhibition',
+    description: 'Piezoelectric Tile Project - Presented a working prototype of a smart energy-harvesting tile',
+    icon: Award,
+    color: 'text-neon-teal'
+  },
+  {
     title: 'Academic Excellence',
     description: 'Scored 95% in CBSE Class XII and 91.4% in ICSE Class X',
     icon: GraduationCap,
-    color: 'text-neon-teal'
+    color: 'text-primary'
   },
   {
     title: 'Project Innovation',
     description: 'Built multiple real-world ML and Full Stack projects with practical applications',
     icon: Star,
-    color: 'text-primary'
+    color: 'text-neon-purple'
   }
 ];
 
@@ -46,7 +58,7 @@ const certifications = [
   'Machine Learning - Simplilearn',
   'Google Cloud - Trust and Security',
   'Google Cloud - Scaling with Cloud Operations',
-  'Full Stack Development - Self-taught'
+  'Full Stack Development'
 ];
 
 export const ExperienceSection = () => {
@@ -127,7 +139,7 @@ export const ExperienceSection = () => {
         {/* Achievements Grid */}
         <div className="mb-16">
           <h3 className="text-2xl font-semibold mb-8 text-center">Key Achievements</h3>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {achievements.map((achievement, index) => {
               const IconComponent = achievement.icon;
               return (
